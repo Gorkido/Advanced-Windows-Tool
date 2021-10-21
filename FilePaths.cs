@@ -1,127 +1,138 @@
-﻿using System;
+﻿/* "Advanced Windows Tool" Written by Gorkido aka Gorkido#8195 on Discord */
+
+using System;
 using System.IO;
 
 namespace Advanced_Windows_Tool
 {
     internal class FilePaths
     {
+        private static readonly string UsrProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        private static readonly string MyComp = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+        private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private static readonly string Recent = Environment.GetFolderPath(Environment.SpecialFolder.Recent);
+        private static readonly string Temp = Path.GetTempPath();
+        private static readonly string WinDir = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+        private static readonly string PF = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
         /* Folder Locations*/
         public string[] Temporary =
         {
         // Windows Temporary Folders
-            Environment.GetFolderPath(Environment.SpecialFolder.Windows) + @"\Temp", // Temp
-            Path.GetTempPath(), // %Temp%
-            Environment.GetFolderPath(Environment.SpecialFolder.Recent), // Recent
-            Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetch", // Prefetch
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Microsoft\Windows\WebCache",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Microsoft\FontCache",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\CrashDumps",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Microsoft\Windows\INetCache\IE",
+            WinDir + @"\Temp", // Temp
+            Temp, // %Temp%
+            Recent, // Recent
+            MyComp + @"\Windows\Prefetch", // Prefetch
+            UsrProfile + @"\AppData\Local\Microsoft\Windows\WebCache",
+            UsrProfile + @"\AppData\Local\Microsoft\FontCache",
+            UsrProfile + @"\AppData\Local\CrashDumps",
+            UsrProfile + @"\AppData\Local\Microsoft\Windows\INetCache\IE",
         // Windows Temporary Folders
 
         // Discord
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\Code Cache\js\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\Code Cache\wasm\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\GPUCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\logs",
+            AppData + @"\discord\Cache\",
+            AppData + @"\discord\Code Cache\js\",
+            AppData + @"\discord\Code Cache\wasm\",
+            AppData + @"\discord\GPUCache\",
+            AppData + @"\discord\logs",
         // Discord
 
         // Spotify
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Spotify\Storage\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Spotify\Browser\GPUCache",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Spotify\Browser\Cache",
+            UsrProfile + @"\AppData\Local\Spotify\Storage\",
+            UsrProfile + @"\Spotify\Browser\GPUCache",
+            UsrProfile + @"\Spotify\Browser\Cache",
         // Spotify
 
         // Chromium apps
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Opera Software\Opera Stable\Default\Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Vivaldi\UserData\Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Microsoft\Edge\Default\Cache\",
+            UsrProfile + @"\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cache\",
+            UsrProfile + @"\AppData\Local\Opera Software\Opera Stable\Default\Cache\",
+            UsrProfile + @"\AppData\Local\Vivaldi\UserData\Cache\",
+            UsrProfile + @"\AppData\Local\Microsoft\Edge\Default\Cache\",
         // Chromium apps
 
         // Adobe
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Adobe\Common\Media Cache Files\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Adobe\Common\Media Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Adobe\Common\Team Projects Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Adobe\Butler\",
+            AppData + @"\Adobe\Common\Media Cache Files\",
+            AppData + @"\Adobe\Common\Media Cache\",
+            AppData + @"\Adobe\Common\Team Projects Cache\",
+            AppData + @"\Adobe\Butler\",
         // Adobe
 
         // Minecraft
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\webcache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\logs\",
+            AppData + @"\.minecraft\webcache\",
+            AppData + @"\.minecraft\logs\",
         // Minecraft
 
         // Blender
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Blender Foundation\Blender\*\cache\",
+            AppData + @"\Blender Foundation\Blender\*\cache\",
         // Blender
 
         // Mozilla
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Mozilla\Firefox\Crash Reports\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Mozilla\Firefox\Profiles\*\OfflineCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Mozilla\Firefox\Profiles\*\startupCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Thunderbird\Profiles\*\cache2\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Thunderbird\Profiles\*\startupCache\",
+            AppData + @"\Mozilla\Firefox\Crash Reports\",
+            UsrProfile + @"\AppData\Local\Mozilla\Firefox\Profiles\*\cache2\",
+            UsrProfile + @"\AppData\Local\Mozilla\Firefox\Profiles\*\OfflineCache\",
+            UsrProfile + @"\AppData\Local\Mozilla\Firefox\Profiles\*\startupCache\",
+            UsrProfile + @"\AppData\Local\Thunderbird\Profiles\*\cache2\",
+            UsrProfile + @"\AppData\Local\Thunderbird\Profiles\*\startupCache\",
         // Mozilla
 
         // Steam
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Steam\htmlcache\",
+            UsrProfile + @"\AppData\Local\Steam\htmlcache\",
         // Steam
 
         // NuGet
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NuGet\Cache\",
+            UsrProfile + @"\AppData\Local\NuGet\Cache\",
         //NuGet
 
         // AMD
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\AMD\DxCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\AMD\GLCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\AMD\VkCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\AMD\Radeonsoftware\cache\",
+            UsrProfile + @"\AppData\Local\AMD\DxCache\",
+            UsrProfile + @"\AppData\Local\AMD\GLCache\",
+            UsrProfile + @"\AppData\Local\AMD\VkCache\",
+            UsrProfile + @"\AppData\Local\AMD\Radeonsoftware\cache\",
         // AMD
 
         // NVIDIA
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NVIDIA Corporation\GeForceNOW\CefCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NVIDIA Corporation\GeForceNOW\IconCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NVIDIA Corporation\NV_Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NVIDIA Corporation\Installer2\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\NVIDIA\GLCache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\NVIDIA Corporation\Downloader\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\NVIDIA Corporation\GeForceNOW\Logs\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\NVIDIA Corporation\NV_Cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\NVIDIA Corporation\Installer2\",
+            UsrProfile + @"\AppData\Local\NVIDIA Corporation\GeForceNOW\CefCache\",
+            UsrProfile + @"\AppData\Local\NVIDIA Corporation\GeForceNOW\IconCache\",
+            UsrProfile + @"\AppData\Local\NVIDIA Corporation\NV_Cache\",
+            UsrProfile + @"\AppData\Local\NVIDIA Corporation\Installer2\",
+            UsrProfile + @"\AppData\Local\NVIDIA\GLCache\",
+            PF + @"\NVIDIA Corporation\Downloader\",
+            PF + @"\NVIDIA Corporation\GeForceNOW\Logs\",
+            PF + @"\NVIDIA Corporation\NV_Cache\",
+            PF + @"\NVIDIA Corporation\Installer2\",
         // NVIDIA
 
         // Google
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Google\Chrome\User Data\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Google\DriveFS\cef_cache\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Google\CrashReports\",
+            UsrProfile + @"\AppData\Local\Google\Chrome\User Data\",
+            UsrProfile + @"\AppData\Local\Google\DriveFS\cef_cache\",
+            UsrProfile + @"\AppData\Local\Google\CrashReports\",
             // Google
         };
 
         public string[] GraphicDrivers =
         {
             // Graphic Drivers
-            Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\AMD",
-            Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\NVIDIA",
-            Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\INTEL"
+            MyComp + @"\AMD",
+            MyComp + @"\NVIDIA",
+            MyComp + @"\INTEL"
             // Graphic Drivers
         };
 
         public string[] TemporaryCachePaths =
         {
             // Google
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Google\Chrome\User Data\",
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Google\Chrome\User Data\Default\",
+            UsrProfile + @"\AppData\Local\Google\Chrome\User Data\",
+            UsrProfile + @"\Google\Chrome\User Data\Default\",
             // Google
 
             // Vortex
-            Path.GetTempPath() + @"\Vortex\",
+            Temp + @"\Vortex\",
             // Vortex
 
             // Origin
-            Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Origin\"
+            UsrProfile + @"\Origin\"
             // Origin
         };
     }
 }
+
+/* "Advanced Windows Tool" Written by Gorkido aka Gorkido#8195 on Discord */

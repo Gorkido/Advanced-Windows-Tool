@@ -60,7 +60,12 @@
             this.AppName = new System.Windows.Forms.Label();
             this.CleanBoxElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DebloaterPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Debloater_Label = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.Debloat = new Guna.UI2.WinForms.Guna2Button();
             this.Left_Panel.SuspendLayout();
             this.About_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Website)).BeginInit();
@@ -582,7 +587,12 @@
             this.DebloaterPanel.BorderColor = System.Drawing.Color.White;
             this.DebloaterPanel.BorderRadius = 31;
             this.DebloaterPanel.BorderThickness = 1;
-            this.DebloaterPanel.Controls.Add(this.label2);
+            this.DebloaterPanel.Controls.Add(this.Debloat);
+            this.DebloaterPanel.Controls.Add(this.guna2Button4);
+            this.DebloaterPanel.Controls.Add(this.guna2Button3);
+            this.DebloaterPanel.Controls.Add(this.guna2Button2);
+            this.DebloaterPanel.Controls.Add(this.guna2Button1);
+            this.DebloaterPanel.Controls.Add(this.Debloater_Label);
             this.DebloaterPanel.CustomBorderColor = System.Drawing.Color.Transparent;
             this.DebloaterPanel.CustomizableEdges.BottomLeft = false;
             this.DebloaterPanel.CustomizableEdges.TopLeft = false;
@@ -594,18 +604,143 @@
             this.DebloaterPanel.TabIndex = 20;
             this.DebloaterPanel.Visible = false;
             // 
-            // label2
+            // Debloater_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(326, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Soon";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Debloater_Label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Debloater_Label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Debloater_Label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Debloater_Label.ForeColor = System.Drawing.Color.White;
+            this.Debloater_Label.Location = new System.Drawing.Point(0, 0);
+            this.Debloater_Label.Name = "Debloater_Label";
+            this.Debloater_Label.Size = new System.Drawing.Size(722, 19);
+            this.Debloater_Label.TabIndex = 1;
+            this.Debloater_Label.Text = "Debloater";
+            this.Debloater_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Black;
+            this.guna2Button1.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderRadius = 31;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(10, 22);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(150, 64);
+            this.guna2Button1.TabIndex = 16;
+            this.guna2Button1.Text = "guna2Button1";
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Black;
+            this.guna2Button2.BorderColor = System.Drawing.Color.White;
+            this.guna2Button2.BorderRadius = 31;
+            this.guna2Button2.BorderThickness = 1;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(561, 22);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(150, 64);
+            this.guna2Button2.TabIndex = 17;
+            this.guna2Button2.Text = "guna2Button2";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BackColor = System.Drawing.Color.Black;
+            this.guna2Button3.BorderColor = System.Drawing.Color.White;
+            this.guna2Button3.BorderRadius = 31;
+            this.guna2Button3.BorderThickness = 1;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.DisabledState.Parent = this.guna2Button3;
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(10, 419);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(150, 64);
+            this.guna2Button3.TabIndex = 18;
+            this.guna2Button3.Text = "guna2Button3";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Black;
+            this.guna2Button4.BorderColor = System.Drawing.Color.White;
+            this.guna2Button4.BorderRadius = 31;
+            this.guna2Button4.BorderThickness = 1;
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.DisabledState.Parent = this.guna2Button4;
+            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(559, 419);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(150, 64);
+            this.guna2Button4.TabIndex = 19;
+            this.guna2Button4.Text = "guna2Button4";
+            // 
+            // Debloat
+            // 
+            this.Debloat.AutoRoundedCorners = true;
+            this.Debloat.BackColor = System.Drawing.Color.Black;
+            this.Debloat.BorderColor = System.Drawing.Color.White;
+            this.Debloat.BorderRadius = 31;
+            this.Debloat.BorderThickness = 1;
+            this.Debloat.CheckedState.Parent = this.Debloat;
+            this.Debloat.CustomImages.Parent = this.Debloat;
+            this.Debloat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Debloat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Debloat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Debloat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Debloat.DisabledState.Parent = this.Debloat;
+            this.Debloat.FillColor = System.Drawing.Color.Transparent;
+            this.Debloat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Debloat.ForeColor = System.Drawing.Color.White;
+            this.Debloat.HoverState.Parent = this.Debloat;
+            this.Debloat.Location = new System.Drawing.Point(275, 216);
+            this.Debloat.Name = "Debloat";
+            this.Debloat.ShadowDecoration.Parent = this.Debloat;
+            this.Debloat.Size = new System.Drawing.Size(172, 64);
+            this.Debloat.TabIndex = 21;
+            this.Debloat.Text = "Debloat Windows";
             // 
             // Cleaner
             // 
@@ -616,9 +751,9 @@
             this.ClientSize = new System.Drawing.Size(912, 545);
             this.Controls.Add(this.TopBar);
             this.Controls.Add(this.Left_Panel);
+            this.Controls.Add(this.DebloaterPanel);
             this.Controls.Add(this.About_Panel);
             this.Controls.Add(this.CleanerPanel);
-            this.Controls.Add(this.DebloaterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -635,7 +770,6 @@
             this.TopBar.ResumeLayout(false);
             this.TopBar.PerformLayout();
             this.DebloaterPanel.ResumeLayout(false);
-            this.DebloaterPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -670,8 +804,13 @@
         private System.Windows.Forms.PictureBox Discord;
         private Guna.UI2.WinForms.Guna2ToggleSwitch ModeChanger;
         private Guna.UI2.WinForms.Guna2Panel DebloaterPanel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Debloater_Label;
         private System.Windows.Forms.PictureBox Website;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button Debloat;
     }
 }
 
