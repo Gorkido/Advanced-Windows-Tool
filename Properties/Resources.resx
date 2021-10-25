@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -118,11 +118,107 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Appearance_FX.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Appearance-FX.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Dark_Mode.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Dark-Mode.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Default_Windows_Update.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Default-Windows-Update.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Action_Center.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Action-Center.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_BackgroundApps.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-BackgroundApps.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Cortana.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Cortana.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Edge_PDF.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Edge-PDF.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Hibernation.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Hibernation.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Last_Used_Files_And_Folders_View.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Last-Used-Files-And-Folders-View.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disable_Location_Tracking.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Disable-Location-Tracking.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\discord.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Enable_Action_Center.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Action-Center.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_BackgroundApps.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-BackgroundApps.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_Clipboard_History.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Clipboard-History.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_Cortana.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Cortana.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_Edge_PDF.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Edge-PDF.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_Hibernation.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Hibernation.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Enable_Location_Tracking.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Enable-Location-Tracking.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Fix_Windows_Update.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Fix-Windows-Update.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Fully_Debloat_Windows.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Fully-Debloat-Windows.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hide_Tray_Icons.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Hide-Tray-Icons.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Install_OneDrive.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Install-OneDrive.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Light_Mode.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Light-Mode.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Performance_FX.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Performance-FX.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Protect_Privacy.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Protect-Privacy.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Remove_Bloatware_RegKeys.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Remove-Bloatware-RegKeys.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Revert_Changes.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Revert-Changes.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Security_Windows_Update.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Security-Windows-Update.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Set_Explorers_LaunchTo_Computer.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Set-Explorers-LaunchTo-Computer.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Set_Explorer_LaunchTo_Fast_Access.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Set-Explorer-LaunchTo-Fast-Access.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Show_Tray_Icons.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Show-Tray-Icons.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Uninstall_OneDrive.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Uninstall-OneDrive.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Unpin_Start.ps1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Powershell_Files\Unpin-Start.ps1;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="website" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\website.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

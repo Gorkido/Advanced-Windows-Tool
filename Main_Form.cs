@@ -3,13 +3,15 @@
 using System;
 using System.Drawing;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Advanced_Windows_Tool
 {
     public partial class Cleaner : Form
     {
+        private readonly Powershell_Files Debloater = new Powershell_Files();
+        private readonly FilePaths FileLocation = new FilePaths();
+        private readonly string TempFolder = Path.GetTempPath() + "\\Debloater Scripts";
         public Cleaner()
         {
             InitializeComponent();
@@ -23,15 +25,15 @@ namespace Advanced_Windows_Tool
                 Top = Height,
                 Left = Left
             };
-            DllHelper.Blur2(Handle, margins);
-            DllHelper.Blur1(Handle);
+            Blurred.Blur2(Handle, margins);
+            Blurred.Blur1(Handle);
         }
 
         private bool mouseDown;
         private Point lastLocation;
         private bool DarkMode;
 
-        public void wait(int milliseconds)
+        public void Wait(int milliseconds)
         {
             Timer timer1 = new System.Windows.Forms.Timer();
             if (milliseconds == 0 || milliseconds < 0)
@@ -48,7 +50,6 @@ namespace Advanced_Windows_Tool
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                // Console.WriteLine("stop wait timer");
             };
 
             while (timer1.Enabled)
@@ -92,13 +93,13 @@ namespace Advanced_Windows_Tool
                     if (dir.Contains("Cache"))
                     {
                         Directory.Delete(dir, true);
-                        wait(1000);
+                        Wait(1000);
                         Directory.CreateDirectory(dir);
                     }
                     if (dir.Contains("cache"))
                     {
                         Directory.Delete(dir, true);
-                        wait(1000);
+                        Wait(1000);
                         Directory.CreateDirectory(dir);
                     }
                 }
@@ -115,7 +116,6 @@ namespace Advanced_Windows_Tool
         {
             CleanLog.Items.Clear();
             ErrorLog.Items.Clear();
-            FilePaths FileLocation = new FilePaths();
 
             foreach (string dir in FileLocation.GraphicDrivers)
             {
@@ -147,7 +147,7 @@ namespace Advanced_Windows_Tool
             }
 
             // Deleting "*.db"
-            string NetCache = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Microsoft\Windows\Explorer\";
+            string NetCache = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\";
             DirectoryInfo d = new DirectoryInfo(NetCache);
 
             FileInfo[] Files = d.GetFiles("*.db"); //Getting db files
@@ -177,6 +177,12 @@ namespace Advanced_Windows_Tool
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
+            Hide();
+            if (Directory.Exists(TempFolder))
+            {
+                Directory.Delete(TempFolder, true);
+            }
+            Wait(1000);
             Application.Exit();
         }
 
@@ -258,6 +264,7 @@ namespace Advanced_Windows_Tool
             About_Panel.Visible = false;
             CleanerPanel.Visible = false;
             DebloaterPanel.Visible = true;
+            Debloater.Startup();
         }
         private void ModeChanger_CheckedChanged(object sender, EventArgs e)
         {
@@ -274,11 +281,11 @@ namespace Advanced_Windows_Tool
                 CleanerButton.ForeColor = Color.Black;
                 DebloaterButton.ForeColor = Color.Black;
                 DebloaterPanel.BorderColor = Color.Black;
-                Button1.ForeColor = Color.Black;
+                CustomizationButton.ForeColor = Color.Black;
                 Button2.ForeColor = Color.Black;
                 Button3.ForeColor = Color.Black;
                 Button4.ForeColor = Color.Black;
-                Button1.BorderColor = Color.Black;
+                CustomizationButton.BorderColor = Color.Black;
                 Button2.BorderColor = Color.Black;
                 Button3.BorderColor = Color.Black;
                 Button4.BorderColor = Color.Black;
@@ -308,11 +315,11 @@ namespace Advanced_Windows_Tool
                 DebloaterButton.ForeColor = Color.FromArgb(23, 23, 23);
                 CleanerButton.ForeColor = Color.FromArgb(23, 23, 23);
                 DebloaterButton.ForeColor = Color.FromArgb(23, 23, 23);
-                Button1.ForeColor = Color.FromArgb(23, 23, 23);
+                CustomizationButton.ForeColor = Color.FromArgb(23, 23, 23);
                 Button2.ForeColor = Color.FromArgb(23, 23, 23);
                 Button3.ForeColor = Color.FromArgb(23, 23, 23);
                 Button4.ForeColor = Color.FromArgb(23, 23, 23);
-                Button1.ForeColor = Color.FromArgb(23, 23, 23);
+                CustomizationButton.ForeColor = Color.FromArgb(23, 23, 23);
                 Button2.ForeColor = Color.FromArgb(23, 23, 23);
                 Button3.ForeColor = Color.FromArgb(23, 23, 23);
                 Button4.ForeColor = Color.FromArgb(23, 23, 23);
@@ -340,11 +347,11 @@ namespace Advanced_Windows_Tool
                 CleanerButton.ForeColor = Color.White;
                 DebloaterButton.ForeColor = Color.White;
                 DebloaterPanel.BorderColor = Color.White;
-                Button1.ForeColor = Color.White;
+                CustomizationButton.ForeColor = Color.White;
                 Button2.ForeColor = Color.White;
                 Button3.ForeColor = Color.White;
                 Button4.ForeColor = Color.White;
-                Button1.BorderColor = Color.White;
+                CustomizationButton.BorderColor = Color.White;
                 Button2.BorderColor = Color.White;
                 Button3.BorderColor = Color.White;
                 Button4.BorderColor = Color.White;
@@ -368,11 +375,11 @@ namespace Advanced_Windows_Tool
                 DebloaterButton.BackColor = Color.Black;
                 CleanerButton.BackColor = Color.Black;
                 DebloaterButton.BackColor = Color.Black;
-                Button1.BackColor = Color.Black;
+                CustomizationButton.BackColor = Color.Black;
                 Button2.BackColor = Color.Black;
                 Button3.BackColor = Color.Black;
                 Button4.BackColor = Color.Black;
-                Button1.BackColor = Color.Black;
+                CustomizationButton.BackColor = Color.Black;
                 Button2.BackColor = Color.Black;
                 Button3.BackColor = Color.Black;
                 Button4.BackColor = Color.Black;
@@ -395,109 +402,365 @@ namespace Advanced_Windows_Tool
             System.Diagnostics.Process.Start("www.NotYetHax.gq");
         }
 
-        public static class DllHelper
+        private void Debloat_MouseDown(object sender, MouseEventArgs e)
         {
-            [DllImport("user32.dll")]
-            internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
-
-            [DllImport("DwmApi.dll")]
-            public static extern int DwmExtendFrameIntoClientArea(IntPtr hwnd, ref MARGINS pMarInset);
-
-            public static int Blur1(IntPtr hwnd)
+            if (Cortana.BackColor == Color.Red)
             {
-                AccentPolicy accentPolicy = new AccentPolicy
-                {
-                    AccentState = AccentState.ACCENT_ENABLE_BLURBEHIND,
-                    AccentFlags = 0,
-                    GradientColor = 0,
-                    AnimationId = 0
-                };
-                WindowCompositionAttributeData data = new WindowCompositionAttributeData
-                {
-                    Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY
-                };
-                int accentSize = Marshal.SizeOf(accentPolicy);
-                IntPtr accentPtr = Marshal.AllocHGlobal(accentSize);
-                Marshal.StructureToPtr(accentPolicy, accentPtr, false);
-                data.Data = accentPtr;
-                data.SizeOfData = accentSize;
-                int result = SetWindowCompositionAttribute(hwnd, ref data);
-                Marshal.FreeHGlobal(accentPtr);
-                return result;
+                Debloater.Powershell(Debloater.PSFiles[1]); // Disable
             }
-
-            public static int Blur2(IntPtr mainWindowPtr, MARGINS margins)
+            else
             {
-                return DwmExtendFrameIntoClientArea(mainWindowPtr, ref margins);
+                Debloater.Powershell(Debloater.PSFiles[2]);
+            }
+            Wait(3000);
+            if (EdgePDF.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[5]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[4]);
+            }
+            Wait(3000);
+            if (OneDrive.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[8]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[9]);
+            }
+            Wait(20000);
+            if (BackgroundApps.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[20]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[21]);
+            }
+            Wait(3000);
+            if (WindowsUpdate.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[16]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[17]);
+            }
+            Wait(3000);
+            if (LocationTracking.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[22]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[23]);
+            }
+            Wait(3000);
+            if (ActionCenter.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[15]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[14]);
+            }
+            Wait(3000);
+            if (VisualFX.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[12]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[13]);
+            }
+            Wait(3000);
+            if (Theme.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[25]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[24]);
+            }
+            Wait(3000);
+            if (TrayIcon.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[11]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[10]);
+            }
+            Wait(3000);
+            if (ClipboardHistory.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[27]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[26]);
+            }
+            Wait(3000);
+            if (Hibernation.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[29]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[28]);
+            }
+            Wait(3000);
+            if (ExplorerLaunchTo.BackColor == Color.Red)
+            {
+                Debloater.Powershell(Debloater.PSFiles[30]);// Disable
+            }
+            else
+            {
+                Debloater.Powershell(Debloater.PSFiles[19]);
             }
         }
 
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct WindowCompositionAttributeData
+        private void Cortana_MouseDown(object sender, MouseEventArgs e)
         {
-            public WindowCompositionAttribute Attribute;
-            public IntPtr Data;
-            public int SizeOfData;
+            if (Cortana.BackColor == Color.Red)
+            {
+                Cortana.BackColor = Color.Lime;
+                CortanaLabel.Text = "Cortana: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                Cortana.BackColor = Color.Red;
+                CortanaLabel.Text = "Cortana: Disabled";
+                Debloater_Label.Focus();
+            }
         }
 
-        internal enum WindowCompositionAttribute
+        private void EdgePDF_MouseDown(object sender, MouseEventArgs e)
         {
-            WCA_UNDEFINED = 0,
-            WCA_NCRENDERING_ENABLED = 1,
-            WCA_NCRENDERING_POLICY = 2,
-            WCA_TRANSITIONS_FORCEDISABLED = 3,
-            WCA_ALLOW_NCPAINT = 4,
-            WCA_CAPTION_BUTTON_BOUNDS = 5,
-            WCA_NONCLIENT_RTL_LAYOUT = 6,
-            WCA_FORCE_ICONIC_REPRESENTATION = 7,
-            WCA_EXTENDED_FRAME_BOUNDS = 8,
-            WCA_HAS_ICONIC_BITMAP = 9,
-            WCA_THEME_ATTRIBUTES = 10,
-            WCA_NCRENDERING_EXILED = 11,
-            WCA_NCADORNMENTINFO = 12,
-            WCA_EXCLUDED_FROM_LIVEPREVIEW = 13,
-            WCA_VIDEO_OVERLAY_ACTIVE = 14,
-            WCA_FORCE_ACTIVEWINDOW_APPEARANCE = 15,
-            WCA_DISALLOW_PEEK = 16,
-            WCA_CLOAK = 17,
-            WCA_CLOAKED = 18,
-            WCA_ACCENT_POLICY = 19,
-            WCA_FREEZE_REPRESENTATION = 20,
-            WCA_EVER_UNCLOAKED = 21,
-            WCA_VISUAL_OWNER = 22,
-            WCA_HOLOGRAPHIC = 23,
-            WCA_EXCLUDED_FROM_DDA = 24,
-            WCA_PASSIVEUPDATEMODE = 25,
-            WCA_LAST = 26
+            if (EdgePDF.BackColor == Color.Red)
+            {
+                EdgePDF.BackColor = Color.Lime;
+                EdgePDFLabel.Text = "Edge PDF: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                EdgePDF.BackColor = Color.Red;
+                EdgePDFLabel.Text = "Edge PDF: Disabled";
+                Debloater_Label.Focus();
+            }
         }
 
-        internal enum AccentState
+        private void OneDrive_MouseDown(object sender, MouseEventArgs e)
         {
-            ACCENT_DISABLED = 0,
-            ACCENT_ENABLE_GRADIENT = 1,
-            ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
-            ACCENT_ENABLE_BLURBEHIND = 3,
-            ACCENT_ENABLE_ACRYLICBLURBEHIND = 4, // RS4 1803
-            ACCENT_ENABLE_HOSTBACKDROP = 5, // RS5 1809
-            ACCENT_INVALID_STATE = 6
+            if (OneDrive.BackColor == Color.Red)
+            {
+                OneDrive.BackColor = Color.Lime;
+                OneDriveLabel.Text = "OneDrive: Installed";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                OneDrive.BackColor = Color.Red;
+                OneDriveLabel.Text = "OneDrive: Uninstalled";
+                Debloater_Label.Focus();
+            }
         }
 
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct AccentPolicy
+        private void BackgroundApps_MouseDown(object sender, MouseEventArgs e)
         {
-            public AccentState AccentState;
-            public int AccentFlags;
-            public int GradientColor;
-            public int AnimationId;
+            if (BackgroundApps.BackColor == Color.Red)
+            {
+                BackgroundApps.BackColor = Color.Lime;
+                BGAppsLabel.Text = "Background Apps: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                BackgroundApps.BackColor = Color.Red;
+                BGAppsLabel.Text = "Background Apps: Disabled";
+                Debloater_Label.Focus();
+            }
         }
 
-        [StructLayout(LayoutKind.Sequential)]
-        public struct MARGINS
+        private void WindowsUpdate_MouseDown(object sender, MouseEventArgs e)
         {
-            public int Left;
-            public int Right;
-            public int Top;
-            public int Bottom;
+            if (WindowsUpdate.BackColor == Color.Red)
+            {
+                WindowsUpdate.BackColor = Color.Lime;
+                WindowsUpdateLabel.Text = "Win Update: Default Updates";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                WindowsUpdate.BackColor = Color.Red;
+                WindowsUpdateLabel.Text = "Win Update: Security Updates";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void ActionCenter_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (ActionCenter.BackColor == Color.Red)
+            {
+                ActionCenter.BackColor = Color.Lime;
+                ActionCenterLabel.Text = "Action Center: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                ActionCenter.BackColor = Color.Red;
+                ActionCenterLabel.Text = "Action Center: Disabled";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void VisualFX_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (VisualFX.BackColor == Color.Red)
+            {
+                VisualFX.BackColor = Color.Lime;
+                VisualFXLabel.Text = "Visual FX: Appearance";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                VisualFX.BackColor = Color.Red;
+                VisualFXLabel.Text = "Visual FX: Performance";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void Theme_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (Theme.BackColor == Color.Red)
+            {
+                Theme.BackColor = Color.Lime;
+                ThemeLabel.Text = "Theme: Dark Mode";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                Theme.BackColor = Color.Red;
+                ThemeLabel.Text = "Theme: Light Mode";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void TrayIcon_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (TrayIcon.BackColor == Color.Red)
+            {
+                TrayIcon.BackColor = Color.Lime;
+                TrayIconLabel.Text = "Tray Icons: Shown";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                TrayIcon.BackColor = Color.Red;
+                TrayIconLabel.Text = "Tray Icons: Hidden";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void ClipboardHistory_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (ClipboardHistory.BackColor == Color.Red)
+            {
+                ClipboardHistory.BackColor = Color.Lime;
+                ClipboardHistoryLabel.Text = "Clipboard History: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                ClipboardHistory.BackColor = Color.Red;
+                ClipboardHistoryLabel.Text = "Clipboard History: Disabled";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void ExplorerLaunchTo_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (ExplorerLaunchTo.BackColor == Color.Red)
+            {
+                ExplorerLaunchTo.BackColor = Color.Lime;
+                ExplorerLaunchToLabel.Text = "Explorer LaunchTo: Computer";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                ExplorerLaunchTo.BackColor = Color.Red;
+                ExplorerLaunchToLabel.Text = "Explorer LaunchTo: Fast Access";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void LocationTracking_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (LocationTracking.BackColor == Color.Red)
+            {
+                LocationTracking.BackColor = Color.Lime;
+                LocationTrackingLabel.Text = "Location Tracking: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                LocationTracking.BackColor = Color.Red;
+                LocationTrackingLabel.Text = "Location Tracking: Disabled";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void Hibernation_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (Hibernation.BackColor == Color.Red)
+            {
+                Hibernation.BackColor = Color.Lime;
+                HibernationLabel.Text = "Hibernation: Enabled";
+                Debloater_Label.Focus();
+            }
+            else
+            {
+                Hibernation.BackColor = Color.Red;
+                HibernationLabel.Text = "Hibernation: Disabled";
+                Debloater_Label.Focus();
+            }
+        }
+
+        private void FullyDebloat_MouseDown(object sender, MouseEventArgs e)
+        {
+            foreach (string PSFiles in Debloater.FullyDebloat)
+            {
+                Debloater.Powershell(PSFiles + "-Sysprep -Debloat -Privacy");
+                Wait(3000);
+            }
+        }
+
+        private void Revert_MouseDown(object sender, MouseEventArgs e)
+        {
+            foreach (string PSFiles in Debloater.Revert)
+            {
+                Debloater.Powershell(PSFiles);
+                Wait(2000);
+            }
+        }
+
+        private void ProtectPrivacy_MouseDown(object sender, MouseEventArgs e)
+        {
+            Debloater.Powershell(Debloater.PSFiles[6]);
+        }
+
+        private void FixWinUpdate_MouseDown(object sender, MouseEventArgs e)
+        {
+            Debloater.Powershell(Debloater.PSFiles[31]);
+        }
+
+        private void RemoveBloatwareKeys_MouseDown(object sender, MouseEventArgs e)
+        {
+            Debloater.Powershell(Debloater.PSFiles[32]);
         }
     }
 }

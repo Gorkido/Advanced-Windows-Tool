@@ -61,6 +61,106 @@ namespace Advanced_Windows_Tool.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Appearance_FX_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Appearance_FX.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Dark_Mode_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Dark_Mode.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Default_Windows_Update_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Default_Windows_Update.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Action_Center_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Action_Center.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_BackgroundApps_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_BackgroundApps.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Cortana_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Cortana.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Edge_PDF_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Edge_PDF.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Hibernation_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Hibernation.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Last_Used_Files_And_Folders_View_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Last_Used_Files_And_Folders_View.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disable_Location_Tracking_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Disable_Location_Tracking.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap discord {
@@ -71,12 +171,232 @@ namespace Advanced_Windows_Tool.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Action_Center_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Action_Center.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_BackgroundApps_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_BackgroundApps.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Clipboard_History_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Clipboard_History.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Cortana_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Cortana.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Edge_PDF_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Edge_PDF.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Hibernation_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Hibernation.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Enable_Location_Tracking_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Enable_Location_Tracking.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Fix_Windows_Update_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Fix_Windows_Update.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Fully_Debloat_Windows_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Fully_Debloat_Windows.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap github {
             get {
                 object obj = ResourceManager.GetObject("github", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Hide_Tray_Icons_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Hide_Tray_Icons.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Install_OneDrive_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Install_OneDrive.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Light_Mode_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Light_Mode.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Performance_FX_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Performance_FX.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Protect_Privacy_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Protect_Privacy.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Remove_Bloatware_RegKeys_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Remove_Bloatware_RegKeys.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Revert_Changes_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Revert_Changes.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Security_Windows_Update_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Security_Windows_Update.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Set_Explorer_LaunchTo_Fast_Access_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Set_Explorer_LaunchTo_Fast_Access.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Set_Explorers_LaunchTo_Computer_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Set_Explorers_LaunchTo_Computer.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Show_Tray_Icons_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Show_Tray_Icons.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Uninstall_OneDrive_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Uninstall_OneDrive.ps1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Unpin_Start_ps1 {
+            get {
+                object obj = ResourceManager.GetObject("Unpin_Start.ps1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

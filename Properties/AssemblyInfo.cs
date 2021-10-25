@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Cache_Cleaner")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Advanced Windows Tool")]
+[assembly: AssemblyDescription("A C# app where you can Clear Temporary Files, Debloat Windows and Customize Windows.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Cache_Cleaner")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyProduct("Advanced Windows Tool")]
+[assembly: AssemblyCopyright("Copyright © NotYetHAX(Gorkido#8195) 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
