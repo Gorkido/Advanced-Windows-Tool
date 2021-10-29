@@ -410,7 +410,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[2]);
+                Debloater.Powershell(Debloater.PSFiles[2]);// Enable
             }
             Wait(3000);
             if (EdgePDF.BackColor == Color.Red)
@@ -419,7 +419,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[4]);
+                Debloater.Powershell(Debloater.PSFiles[4]);// Enable
             }
             Wait(3000);
             if (OneDrive.BackColor == Color.Red)
@@ -428,7 +428,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[9]);
+                Debloater.Powershell(Debloater.PSFiles[9]);// Enable
             }
             Wait(20000);
             if (BackgroundApps.BackColor == Color.Red)
@@ -437,7 +437,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[21]);
+                Debloater.Powershell(Debloater.PSFiles[21]);// Enable
             }
             Wait(3000);
             if (WindowsUpdate.BackColor == Color.Red)
@@ -446,7 +446,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[17]);
+                Debloater.Powershell(Debloater.PSFiles[17]);// Enable
             }
             Wait(3000);
             if (LocationTracking.BackColor == Color.Red)
@@ -455,7 +455,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[23]);
+                Debloater.Powershell(Debloater.PSFiles[23]);// Enable
             }
             Wait(3000);
             if (ActionCenter.BackColor == Color.Red)
@@ -464,7 +464,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[14]);
+                Debloater.Powershell(Debloater.PSFiles[14]);// Enable
             }
             Wait(3000);
             if (VisualFX.BackColor == Color.Red)
@@ -473,7 +473,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[13]);
+                Debloater.Powershell(Debloater.PSFiles[13]);// Enable
             }
             Wait(3000);
             if (Theme.BackColor == Color.Red)
@@ -482,7 +482,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[24]);
+                Debloater.Powershell(Debloater.PSFiles[24]);// Enable
             }
             Wait(3000);
             if (TrayIcon.BackColor == Color.Red)
@@ -491,7 +491,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[10]);
+                Debloater.Powershell(Debloater.PSFiles[10]);// Enable
             }
             Wait(3000);
             if (ClipboardHistory.BackColor == Color.Red)
@@ -500,7 +500,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[26]);
+                Debloater.Powershell(Debloater.PSFiles[26]);// Enable
             }
             Wait(3000);
             if (Hibernation.BackColor == Color.Red)
@@ -509,7 +509,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[28]);
+                Debloater.Powershell(Debloater.PSFiles[28]);// Enable
             }
             Wait(3000);
             if (ExplorerLaunchTo.BackColor == Color.Red)
@@ -518,7 +518,7 @@ namespace Advanced_Windows_Tool
             }
             else
             {
-                Debloater.Powershell(Debloater.PSFiles[19]);
+                Debloater.Powershell(Debloater.PSFiles[19]);// Enable
             }
         }
 
