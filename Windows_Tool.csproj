@@ -59,7 +59,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Win10.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Win10.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -329,7 +329,7 @@
     <None Include="Resources\website.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Win10.ico" />
+    <Content Include="Resources\Win10.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
