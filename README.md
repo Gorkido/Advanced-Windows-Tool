@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png" width="200" />
+<img src="https://user-images.githubusercontent.com/81165187/140626457-5f049636-91ac-47df-813d-e2459a886db1.png" width="200" />
 
 # Advanced-Windows-Tool
 **A C# app where you can Clear Temporary Files, Debloat Windows and Customize Windows <-(Soon).**
