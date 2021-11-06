@@ -102,10 +102,9 @@ namespace Advanced_Windows_Tool
         // NVIDIA
 
         // Google
-            UsrProfile + "\\AppData\\Local\\Google\\Chrome\\User Data\\",
             UsrProfile + "\\AppData\\Local\\Google\\DriveFS\\cef_cache\\",
             UsrProfile + "\\AppData\\Local\\Google\\CrashReports\\",
-            // Google
+        // Google
         };
 
         public string[] GraphicDrivers =

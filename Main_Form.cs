@@ -3,6 +3,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Advanced_Windows_Tool
@@ -16,23 +17,40 @@ namespace Advanced_Windows_Tool
         {
             InitializeComponent();
         }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            MARGINS margins = new MARGINS
-            {
-                Top = Height,
-                Left = Left
-            };
-            Blurred.Blur2(Handle, margins);
-            Blurred.Blur1(Handle);
-        }
-
         private bool mouseDown;
         private Point lastLocation;
         private bool DarkMode;
+        private readonly Timer t1 = new Timer();
+        private async void ExitForm()
+        {
+            for (Opacity = 1; Opacity > .0; Opacity -= .1) { await Task.Delay(10); }
+            if (Directory.Exists(TempFolder))
+            {
+                Directory.Delete(TempFolder, true);
+            }
+            Wait(1000);
+            Application.Exit();
+        }
 
+        private void FadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+            {
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            }
+            else
+            {
+                Opacity += 0.05;
+            }
+        }
+        private void StartForm()
+        {
+            Opacity = 0;      //first the opacity is 0
+
+            t1.Interval = 10;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(FadeIn);  //this calls the function that changes opacity
+            t1.Start();
+        }
         public void Wait(int milliseconds)
         {
             Timer timer1 = new System.Windows.Forms.Timer();
@@ -109,7 +127,15 @@ namespace Advanced_Windows_Tool
 
         private void Cleaner_Form_Load(object sender, EventArgs e)
         {
+            MARGINS margins = new MARGINS
+            {
+                Top = Height,
+                Left = Left
+            };
+            Blurred.Blur2(Handle, margins);
+            Blurred.Blur1(Handle);
             DarkMode = true;
+            StartForm();
         }
 
         private void Clean_MouseDown(object sender, MouseEventArgs e)
@@ -177,13 +203,7 @@ namespace Advanced_Windows_Tool
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
-            Hide();
-            if (Directory.Exists(TempFolder))
-            {
-                Directory.Delete(TempFolder, true);
-            }
-            Wait(1000);
-            Application.Exit();
+            ExitForm();
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)

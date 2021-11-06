@@ -139,40 +139,40 @@ namespace Advanced_Windows_Tool
 
         public string[] FullyDebloat =
         {
-            TempFolder + "\\Fully-Debloat-Windows.ps1", //0
-            TempFolder + "\\Disable-Cortana.ps1", //1
-            TempFolder + "\\Disable-Last-Used-Files-And-Folders-View.ps1", //3
-            TempFolder + "\\Disable-Edge-PDF.ps1", //5
-            TempFolder + "\\Protect-Privacy.ps1", //6
-            TempFolder + "\\Uninstall-OneDrive.ps1", //8
-            TempFolder + "\\Disable-Action-Center.ps1", //15
-            TempFolder + "\\Security-Windows-Update.ps1", //16
-            TempFolder + "\\Unpin-Start.ps1", //18
-            TempFolder + "\\Set Explorers LaunchTo Computer.ps1", //19
-            TempFolder + "\\Disable-BackgroundApps.ps1", //20
-            TempFolder + "\\Disable-Location-Tracking.ps1", //22
-            TempFolder + "\\Dark-Mode.ps1", //24
-            TempFolder + "\\Disable-Clipboard-History.ps1", //27
-            TempFolder + "\\Disable-Hibernation.ps1", //29
+            TempFolder + "\\Fully-Debloat-Windows.ps1",
+            TempFolder + "\\Disable-Cortana.ps1",
+            TempFolder + "\\Disable-Last-Used-Files-And-Folders-View.ps1",
+            TempFolder + "\\Disable-Edge-PDF.ps1",
+            TempFolder + "\\Protect-Privacy.ps1",
+            TempFolder + "\\Uninstall-OneDrive.ps1",
+            TempFolder + "\\Disable-Action-Center.ps1",
+            TempFolder + "\\Security-Windows-Update.ps1",
+            TempFolder + "\\Unpin-Start.ps1",
+            TempFolder + "\\Set Explorers LaunchTo Computer.ps1",
+            TempFolder + "\\Disable-BackgroundApps.ps1",
+            TempFolder + "\\Disable-Location-Tracking.ps1",
+            TempFolder + "\\Dark-Mode.ps1",
+            TempFolder + "\\Disable-Clipboard-History.ps1",
+            TempFolder + "\\Disable-Hibernation.ps1",
             TempFolder + "\\Remove-Bloatware-RegKeys.ps1",
         };
 
         public string[] Revert =
         {
-            TempFolder + "\\Revert-Changes.ps1", //7
-            TempFolder + "\\Enable-Cortana.ps1", //2
-            TempFolder + "\\Enable-Edge-PDF.ps1", //4
-            TempFolder + "\\Enable-Action-Center.ps1", //14
-            TempFolder + "\\Appearance-FX.ps1", //13
-            TempFolder + "\\Hide-Tray-Icon", //11
-            TempFolder + "\\Install-OneDrive.ps1", //9
-            TempFolder + "\\Default-Windows-Update.ps1", //17
-            TempFolder + "\\Enable-BackgroundApps.ps1", //21
-            TempFolder + "\\Enable-Location-Tracking.ps1", //23
-            TempFolder + "\\Light-Mode.ps1", //25
-            TempFolder + "\\Enable-Clipboard-History.ps1", //26
-            TempFolder + "\\Enable-Hibernation.ps1", //28
-            TempFolder + "\\Set-Explorer-LaunchTo-Fast-Access.ps1", //30
+            TempFolder + "\\Revert-Changes.ps1",
+            TempFolder + "\\Enable-Cortana.ps1",
+            TempFolder + "\\Enable-Edge-PDF.ps1",
+            TempFolder + "\\Enable-Action-Center.ps1",
+            TempFolder + "\\Appearance-FX.ps1",
+            TempFolder + "\\Hide-Tray-Icon",
+            TempFolder + "\\Install-OneDrive.ps1",
+            TempFolder + "\\Default-Windows-Update.ps1",
+            TempFolder + "\\Enable-BackgroundApps.ps1",
+            TempFolder + "\\Enable-Location-Tracking.ps1",
+            TempFolder + "\\Light-Mode.ps1",
+            TempFolder + "\\Enable-Clipboard-History.ps1",
+            TempFolder + "\\Enable-Hibernation.ps1",
+            TempFolder + "\\Set-Explorer-LaunchTo-Fast-Access.ps1",
         };
     }
 }
