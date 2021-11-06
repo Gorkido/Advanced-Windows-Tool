@@ -348,7 +348,7 @@
             this.CleanerButton.ShadowDecoration.Parent = this.CleanerButton;
             this.CleanerButton.Size = new System.Drawing.Size(188, 71);
             this.CleanerButton.TabIndex = 1;
-            this.CleanerButton.Text = "Temp  File Cleaner";
+            this.CleanerButton.Text = "Temp File Cleaner";
             this.CleanerButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CleanerButton_MouseDown);
             // 
             // About_Panel
