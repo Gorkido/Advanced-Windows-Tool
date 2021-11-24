@@ -11,9 +11,10 @@
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
 
+<p align="center">
+  
 ## Preview
 
-<p align="center">
 <img src="https://user-images.githubusercontent.com/81165187/140626436-a3594752-1218-4fcb-af08-6ac2064a827d.png">
 <img src="https://user-images.githubusercontent.com/81165187/140626446-e3cfa1ee-858c-46d7-b159-4510ce996d60.png">
 </p>
