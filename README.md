@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/81165187/140626457-5f049636-91ac-47df-813d-e2459a886db1.png" width="200" />
 
 # Advanced-Windows-Tool
-**A C# app where you can Clear Temporary Files, Debloat Windows and Customize Windows <-(Soon).**
+**A C# application where you can delete temporary files, debloat Windows and customize Windows.**
 
 <p align="center">
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
